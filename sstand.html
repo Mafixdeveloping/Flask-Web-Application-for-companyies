@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Willkommen auf dem Dashboard, {{ username }}!</h1>
+    <form id="zucker_form" action="/sstand/zuckeras" method="post">
+        <button type="submit">+1 Zuckerwatte</button>
+    </form>
+    <form id="zucker" action="/sstand/zucker" method="post">
+        <button type="submit">-1 Zuckerwatte</button>
+    </form>
+    <h2>Zuckerwatte aktuell: {{ cz }}</h2>
+    <form id="crepes_form" action="/sstand/crepesteller" method="post">
+        <button type="submit">+1 Crepes</button>
+    </form>
+    <form id="crepes" action="/sstand/crepes" method="post">
+        <button type="submit">-1 Crepes</button>
+    </form>
+    <h2>Crepes aktuell: {{ cc }}</h2>
+    <form id="sekt_form" action="/sstand/sektglas" method="post">
+        <button type="submit">+1 Sekt 0.1l</button>
+    </form>
+    <form id="sekt" action="/sstand/sekt" method="post">
+        <button type="submit">-1 Sekt 0.1l</button>
+    </form>
+    <h2>Sekt aktuell: {{ cs }}</h2>
+    <form id="erdbeer_form" action="/sstand/eis" method="post">
+        <button type="submit">+1 Erdbeereis</button>
+    </form>
+    <form id="erdbeer" action="/sstand/eeis" method="post">
+        <button type="submit">-1 Erdbeereis</button>
+    </form>
+    <h2>Erdbeereis aktuell: {{ ce }}</h2>
+    <form id="kuchen_form" action="/sstand/kuchen" method="post">
+        <button type="submit">+1 Erdbeerkuchen</button>
+    </form>
+    <form id="kuchen" action="/sstand/ekuchen" method="post">
+        <button type="submit">-1 Erdbeerkuchen</button>
+    </form>
+    <h2>Erdbeerkuchen aktuell: {{ ck }}</h2>
+    <form id="book_form" action="/sstand/book" method="post">
+        <button type="submit">Buchen</button>
+    </form>
+    <form id="reset" action="/sstand/reset" method="post">
+        <button type="submit">Rückgeld Reset</button>
+    </form>
+
+
+    <h2>Zwischensumme: {{ zwsn }} €</h2>
+
+<form method="post" action="/sstand/add_digit">
+  <div id="tastenfeld">
+    <button type="submit" name="digit" value="1">1</button>
+    <button type="submit" name="digit" value="2">2</button>
+    <button type="submit" name="digit" value="3">3</button>
+    <br>
+    <button type="submit" name="digit" value="4">4</button>
+    <button type="submit" name="digit" value="5">5</button>
+    <button type="submit" name="digit" value="6">6</button>
+    <br>
+    <button type="submit" name="digit" value="7">7</button>
+    <button type="submit" name="digit" value="8">8</button>
+    <button type="submit" name="digit" value="9">9</button>
+    <br>
+    <button type="submit" name="digit" value="0">0</button>
+    <button type="submit" name="digit" value=".">.</button>
+  </div>
+    <h2>Gegeben: {{ new_number }} €</h2>
+</form>
+    <h2>Rückgeld: {{ rg }} €</h2>
+  <form action="/sstand/logout" method="post">
+      <button type="submit">Logout</button>
+  </form>
+
+</body>
+</html>

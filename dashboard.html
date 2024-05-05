@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+</head>
+<body>
+    <h1>Willkommen auf dem Dashboard, {{ username }}!</h1>
+    <form action="/dashboard/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <h2>Verkäufe Erdbeereis: {{ selle }}</h2>
+    <h2>Umsatz Erdbeereis: {{ ue }} €</h2>
+    <h2>Verkäufe Zuckerwatte: {{ sellz }}</h2>
+    <h2>Umsatz Zuckerwatte: {{ uz }} €</h2>
+    <h2>Verkäufe Sekt: {{ sells }}</h2>
+    <h2>Umsatz Sekt: {{ us }} €</h2>
+    <h2>Verkäufe Crepes: {{ sellc }}</h2>
+    <h2>Umsatz Crepes: {{ uc }} €</h2>
+    <h2>Verkäufe Erdbeerkuchen: {{ sellk }}</h2>
+    <h2>Umsatz Erdbeerkuchen: {{ uk }} €</h2>
+    <br>
+    <br>
+    <h1>Umsatz gesamt: {{ ug }} €</h1>
+    <h1>Produktverkäufe gesamt: {{ sella }}</h1>
+    <h1>Kundenbestellungen gesamt: {{ kunden }}</h1>
+</body>
+</html>
